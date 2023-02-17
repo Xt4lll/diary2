@@ -1,0 +1,34 @@
+﻿<Window x:Class="diarry.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:diarry"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="0.5*"/>
+            <ColumnDefinition Width="0.5*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="0.5*"/>
+        </Grid.RowDefinitions>
+        <DatePicker x:Name="datePicker" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.ColumnSpan="3"/>
+        <ListBox x:Name="notesField" Grid.Row="1" Grid.RowSpan="4" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" SelectionChanged="notesField_SelectionChanged"/>
+        <Button x:Name="delete" Content="удалить" Grid.Row="5" HorizontalAlignment="Stretch" VerticalAlignment="Center" Click="delete_Click"/>
+        <TextBlock Grid.Column="1" HorizontalAlignment="Stretch" Grid.Row="1" TextWrapping="Wrap" Text="заметка" VerticalAlignment="Bottom" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="name" Grid.Column="1" HorizontalAlignment="Stretch" Grid.Row="2" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Grid.ColumnSpan="2" TextChanged="TextBox_TextChanged"/>
+        <TextBlock Grid.Column="1" HorizontalAlignment="Stretch" Grid.Row="3" TextWrapping="Wrap" Text="описание" VerticalAlignment="Bottom" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="description" Grid.Column="1" HorizontalAlignment="Stretch" Grid.Row="4" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Grid.ColumnSpan="2" TextChanged="TextBox_TextChanged_1"/>
+        <Button x:Name="add" Content="добавить" Grid.Row="5" Grid.Column="1" VerticalAlignment="Bottom" Margin="0,0,0,8" Click="Button_Click"/>
+        <Button x:Name="change" Content="изменить" Grid.Row="5" Grid.Column="2" HorizontalAlignment="Stretch" VerticalAlignment="Center" Click="change_Click"/>
+
+    </Grid>
+</Window>
